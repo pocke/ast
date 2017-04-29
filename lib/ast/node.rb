@@ -72,9 +72,7 @@ module AST
     # @param [Object] other
     # @return [Boolean]
     def eql?(other)
-      self.class.eql?(other.class)   &&
-      @type.eql?(other.type)         &&
-      @children.eql?(other.children)
+      hash == other.hash
     end
 
     # By default, each entry in the `properties` hash is assigned to
